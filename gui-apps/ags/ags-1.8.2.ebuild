@@ -38,8 +38,8 @@ RDEPEND="${DEPEND}"
 
 BDEPEND="
 	${DEPEND}
-	dev-util/cmake
-	dev-util/meson
+	dev-build/cmake
+	dev-build/meson
 "
 
 
