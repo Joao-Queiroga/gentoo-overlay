@@ -16,11 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="systray"
 
-DEPEND="
-	>=dev-util/electron-20.0.0:=
-"
 RDEPEND="
-	${DEPEND}
 	systray? ( dev-libs/libappindicator:3 )
 "
 
