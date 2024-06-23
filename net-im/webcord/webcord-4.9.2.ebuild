@@ -22,6 +22,10 @@ RDEPEND="
 
 src_unpack() {
     rpm_src_unpack ${A}
-	mkdir ${P}
-	mv ${WORKDIR}/usr ${S}
+	mkdir ${S}
+	mv ${WORKDIR}/* ${S}
+}
+
+src_install() {
+	mv ${S}/* ${D}
 }
