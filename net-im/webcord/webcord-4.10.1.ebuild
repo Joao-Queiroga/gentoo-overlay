@@ -14,7 +14,7 @@ SRC_URI="
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="systray"
+IUSE="+systray"
 
 RDEPEND="
 	systray? ( dev-libs/libappindicator:3 )
