@@ -11,15 +11,13 @@ KEYWORDS="amd64"
 
 DEPEND="
 	gui-libs/gtk-layer-shell[introspection,vala]
+	dev-libs/gjs
+	gui-libs/astal-io
+	gui-libs/astal
 "
 RDEPEND="${DEPEND}"
 BDEPEND="
-	dev-lang/vala[valadoc]
-	dev-libs/gobject-introspection
-	dev-libs/wayland-protocols
 	dev-build/meson
-	gui-libs/astal-io
-	gui-libs/astal
 "
 
 src_configure() {
