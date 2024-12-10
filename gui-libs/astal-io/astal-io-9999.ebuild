@@ -22,7 +22,7 @@ BDEPEND="
 
 src_configure() {
 	pushd "${S}/lib/astal/io" > /dev/null || die
-	meson setup --prefix=/usr build || die "Falha ao configurar ${lib}"
+	meson setup --prefix=/usr build || die "Falha ao configurar"
 	popd > /dev/null
 }
 
