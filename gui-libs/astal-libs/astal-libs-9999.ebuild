@@ -12,9 +12,11 @@ IUSE="+apps auth +battery +bluetooth cava greet +hyprland mpris network +notifd 
 
 DEPEND="
 	gui-libs/gtk-layer-shell[introspection]
+	tray? ( dev-libs/libayatana-appindicator )
 "
 RDEPEND="${DEPEND}"
 BDEPEND="
+	tray? ( gui-libs/appmenu-glib-translator )
 	dev-lang/vala[valadoc]
 	dev-libs/gobject-introspection
 	dev-libs/wayland-protocols
