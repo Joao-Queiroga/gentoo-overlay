@@ -17,7 +17,7 @@ KEYWORDS="~amd64"
 IUSE="+systray"
 
 RDEPEND="
-	systray? ( dev-libs/libappindicator:3 )
+	systray? ( dev-libs/libayatana-appindicator )
 "
 
 src_unpack() {
