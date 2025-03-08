@@ -20,24 +20,4 @@ BDEPEND="
 	dev-build/meson
 "
 
-src_configure() {
-	pushd "${S}/lang/gjs" > /dev/null || die
-	meson setup --prefix=/usr build || die "Falha ao configurar"
-	popd > /dev/null
-}
-
-src_compile() {
-	pushd "${S}/lang/gjs" > /dev/null || die
-	meson compile -C build || die "Falha ao compilar"
-	popd > /dev/null
-}
-
-src_test() {
-	:
-}
-
-src_install() {
-	pushd "${S}/lang/gjs" > /dev/null || die
-	meson_install -C build || die "Falha ao instalar"
-	popd > /dev/null
-}
+S="${S}/lang/gjs"
