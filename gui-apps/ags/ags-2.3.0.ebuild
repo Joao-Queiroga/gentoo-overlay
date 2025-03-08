@@ -37,7 +37,12 @@ LICENSE="GPL-3.0"
 SLOT="0"
 KEYWORDS="~amd64"
 
-DEPEND=""
+DEPEND="
+	gui-libs/astal
+	gui-libs/astal-libs
+	gui-libs/astal-gjs
+	net-libs/nodejs[npm]
+"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
