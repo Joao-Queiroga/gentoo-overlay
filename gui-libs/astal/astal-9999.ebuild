@@ -1,5 +1,7 @@
 EAPI=8
-inherit git-r3 meson
+
+VALA_USE_DEPEND="valadoc"
+inherit git-r3 meson vala
 
 DESCRIPTION="Building blocks for building desktop shells."
 HOMEPAGE="https://aylur.github.io/astal"
@@ -14,7 +16,6 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 BDEPEND="
-	dev-lang/vala[valadoc]
 	dev-libs/gobject-introspection
 	dev-libs/wayland-protocols
 	dev-build/meson
@@ -22,23 +23,17 @@ BDEPEND="
 "
 
 src_configure() {
-	pushd "${S}/lib/astal/gtk3" > /dev/null || die
-	meson setup --prefix=/usr build || die "Falha ao configurar"
-	popd > /dev/null
+	vala_setup
+	S="${S}/lib/astal/gtk3" meson_src_configure
+	S="${S}/lib/astal/gtk4" meson_src_configure
 }
 
 src_compile() {
-	pushd "${S}/lib/astal/gtk3" > /dev/null || die
-	meson compile -C build || die "Falha ao compilar"
-	popd > /dev/null
-}
-
-src_test() {
-	:
+	S="${S}/lib/astal/gtk3" meson_src_compile
+	S="${S}/lib/astal/gtk4" meson_src_compile
 }
 
 src_install() {
-	pushd "${S}/lib/astal/gtk3" > /dev/null || die
-	meson_install -C build || die "Falha ao instalar"
-	popd > /dev/null
+	S="${S}/lib/astal/gtk3" meson_src_install
+	S="${S}/lib/astal/gtk4" meson_src_install
 }

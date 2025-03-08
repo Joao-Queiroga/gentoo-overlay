@@ -18,7 +18,6 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND="
 	tray? ( gui-libs/appmenu-glib-translator )
-	dev-lang/vala[valadoc]
 	dev-libs/gobject-introspection
 	dev-libs/wayland-protocols
 	dev-build/meson
