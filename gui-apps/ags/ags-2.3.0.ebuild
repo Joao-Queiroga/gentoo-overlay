@@ -42,6 +42,7 @@ DEPEND="
 	gui-libs/astal-libs
 	gui-libs/astal-gjs
 	net-libs/nodejs[npm]
+	dev-util/dart-sass
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
