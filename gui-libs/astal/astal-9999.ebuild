@@ -13,6 +13,7 @@ KEYWORDS="amd64"
 
 DEPEND="
 	gui-libs/gtk-layer-shell[introspection,vala]
+	gui-libs/gtk4-layer-shell[introspection,vala]
 "
 RDEPEND="${DEPEND}"
 BDEPEND="
