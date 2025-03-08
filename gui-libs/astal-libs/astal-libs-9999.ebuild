@@ -25,12 +25,18 @@ BDEPEND="
 
 USE_FLAGS=(apps auth battery bluetooth cava greet hyprland mpris network notifd powerprofiles river tray wireplumber)
 
-src_configure() {
+src_prepare() {
+	default
 	vala_setup
+}
+
+src_configure() {
 	for lib in "${USE_FLAGS[@]}"; do
 		if use "${lib}"; then
 			einfo "Configurando biblioteca ${lib}..."
-			S="${S}/lib/${lib}" meson_src_configure
+			pushd "${S}/lib/${lib}" > /dev/null || die
+			meson setup --prefix=/usr build || die "Falha ao configurar ${lib}"
+			popd > /dev/null
 		fi
 	done
 }
@@ -38,7 +44,10 @@ src_configure() {
 src_compile() {
 	for lib in "${USE_FLAGS[@]}"; do
 		if use "${lib}"; then
-			S="${S}/lib/${lib}" meson_src_compile
+			einfo "Compilando biblioteca ${lib}..."
+			pushd "${S}/lib/${lib}/build" > /dev/null || die
+			meson compile || die "Falha ao compilar ${lib}"
+			popd > /dev/null
 		fi
 	done
 }
@@ -47,7 +56,9 @@ src_install() {
 	for lib in "${USE_FLAGS[@]}"; do
 		if use "${lib}"; then
 			einfo "Instalando biblioteca ${lib}..."
-			S="${S}/lib/${lib}" meson_install
+			pushd "${S}/lib/${lib}/build" > /dev/null || die
+			meson_install || die "Falha ao instalar ${lib}"
+			popd > /dev/null
 		fi
 	done
 }

@@ -22,18 +22,38 @@ BDEPEND="
 	gui-libs/astal-io
 "
 
-src_configure() {
+src_prepare() {
+	default
 	vala_setup
-	S="${S}/lib/astal/gtk3" meson_src_configure
-	S="${S}/lib/astal/gtk4" meson_src_configure
+}
+
+src_configure() {
+	einfo "Configurando gtk3 ..."
+	pushd "${S}/lib/astal/gtk3" > /dev/null || die
+	meson setup --prefix=/usr build || die "Falha ao configurar ${lib}"
+	popd > /dev/null
+	einfo "Configurando gtk4 ..."
+	pushd "${S}/lib/astal/gtk4" > /dev/null || die
+	meson setup --prefix=/usr build || die "Falha ao configurar ${lib}"
+	popd > /dev/null
 }
 
 src_compile() {
-	S="${S}/lib/astal/gtk3" meson_src_compile
-	S="${S}/lib/astal/gtk4" meson_src_compile
+	einfo "Compilando gtk3 ..."
+	pushd "${S}/lib/astal/gtk3" > /dev/null || die
+	meson compile -C build || die "Falha ao compilar gtk3"
+	popd > /dev/null
+	einfo "Compilando gtk4 ..."
+	pushd "${S}/lib/astal/gtk4" > /dev/null || die
+	meson compile -C build || die "Falha ao compilar gtk3"
+	popd > /dev/null
 }
 
 src_install() {
-	S="${S}/lib/astal/gtk3" meson_src_install
-	S="${S}/lib/astal/gtk4" meson_src_install
+	pushd "${S}/lib/astal/gtk3" > /dev/null || die
+	meson_install -C build || die "Falha ao instalar"
+	popd > /dev/null
+	pushd "${S}/lib/astal/gtk4" > /dev/null || die
+	meson_install -C build || die "Falha ao instalar"
+	popd > /dev/null
 }
