@@ -3,7 +3,8 @@
 
 EAPI=8
 
-inherit meson
+VALA_USE_DEPEND="valadoc"
+inherit meson vala
 
 DESCRIPTION="vala panel appmenu glib translator"
 HOMEPAGE=""
@@ -17,3 +18,8 @@ KEYWORDS="~amd64"
 DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=""
+
+src_configure() {
+	vala_setup
+	meson_src_configure
+}
