@@ -9,7 +9,6 @@ EGIT_REPO_URI="https://github.com/Aylur/astal"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64"
 
 DEPEND="
 	gui-libs/gtk-layer-shell[introspection,vala]
