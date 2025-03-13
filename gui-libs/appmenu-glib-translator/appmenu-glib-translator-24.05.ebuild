@@ -17,9 +17,11 @@ KEYWORDS="~amd64"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
-BDEPEND=""
+BDEPEND="
+	dev-lang/vala[valadoc]
+"
 
-src_configure() {
+src_prepare() {
+	default
 	vala_setup
-	meson_src_configure
 }
