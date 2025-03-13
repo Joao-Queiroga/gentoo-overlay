@@ -48,7 +48,9 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 src_compile() {
-    ego build
+    ego build -ldflags "\
+    -X 'main.gtk4LayerShell=$(pkg-config --variable=libdir gtk4-layer-shell-0)/libgtk4-layer-shell.so' \
+    -X 'main.astalGjs=$(pkg-config --variable=srcdir astal-gjs)'"
 }
 
 src_install() {
