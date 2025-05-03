@@ -19,7 +19,14 @@ fi
 LICENSE="GPL-2"
 SLOT="0"
 
-modlist=(
-	ddcci=misc:ddcci
-	ddcci-backlight=misc:ddcci-backlight
-)
+
+src_compile() {
+	MODULES_MAKEARGS+=(
+		TARGET="${KV_FULL}"
+	)
+	local modlist=(
+		ddcci=misc:ddcci
+		ddcci-backlight=misc:ddcci-backlight
+	)
+	linux-mod-r1_src_compile
+}
