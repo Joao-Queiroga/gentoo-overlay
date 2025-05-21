@@ -1,0 +1,24 @@
+diff --git a/ddcci-backlight/Makefile b/ddcci-backlight/Makefile
+--- a/ddcci-backlight/Makefile
++++ b/ddcci-backlight/Makefile
+@@ -18,7 +18,7 @@
+ MODULE_NAME := ddcci-backlight
+ MODULE_VERSION := 0.4.5
+ 
+-KVER := $(shell uname -r)
++KVER ?= $(shell uname -r)
+ LIB_MODULES_PATH := /lib/modules
+ KERNEL_MODLIB := $(LIB_MODULES_PATH)/$(KVER)
+ MODDIR := $(KERNEL_MODLIB)/extra
+diff --git a/ddcci/Makefile b/ddcci/Makefile
+--- a/ddcci/Makefile
++++ b/ddcci/Makefile
+@@ -18,7 +18,7 @@
+ MODULE_NAME := ddcci
+ MODULE_VERSION := 0.4.5
+ 
+-KVER := $(shell uname -r)
++KVER ?= $(shell uname -r)
+ LIB_MODULES_PATH := /lib/modules
+ KERNEL_MODLIB := $(LIB_MODULES_PATH)/$(KVER)
+ MODDIR := $(KERNEL_MODLIB)/extra

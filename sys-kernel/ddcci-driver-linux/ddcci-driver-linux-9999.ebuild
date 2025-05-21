@@ -19,10 +19,11 @@ fi
 LICENSE="GPL-2"
 SLOT="0"
 
+PATCHES+=( "${FILESDIR}/kver.patch" )
 
 src_compile() {
 	MODULES_MAKEARGS+=(
-		TARGET="${KV_FULL}"
+		KVER="${KV_FULL}"
 	)
 	local modlist=(
 		ddcci=misc:ddcci
