@@ -15,44 +15,46 @@ CRATES="
 	anstream@0.6.18
 	anstyle-parse@0.2.6
 	anstyle-query@1.1.2
-	anstyle-wincon@3.0.7
+	anstyle-wincon@3.0.8
 	anstyle@1.0.10
-	anyhow@1.0.97
+	anyhow@1.0.98
+	approx@0.5.1
 	arbitrary@1.4.1
 	arc-swap@1.7.1
 	arg_enum_proc_macro@0.3.4
 	arrayvec@0.7.6
 	async-priority-channel@0.2.0
 	autocfg@1.4.0
-	av1-grain@0.2.3
+	av1-grain@0.2.4
 	avif-serialize@0.8.3
-	backtrace@0.3.74
+	backtrace@0.3.75
 	base64@0.22.1
 	better-panic@0.3.0
 	bincode@1.3.3
 	bit_field@0.10.2
 	bitflags@1.3.2
-	bitflags@2.9.0
+	bitflags@2.9.1
 	bitstream-io@2.6.0
-	block-buffer@0.10.4
+	bitvec@1.0.1
 	block2@0.5.1
-	bstr@1.11.3
+	bstr@1.12.0
 	built@0.7.7
 	bumpalo@3.17.0
-	bytemuck@1.22.0
+	by_address@1.2.1
+	bytemuck@1.23.0
 	byteorder-lite@0.1.0
 	bytes@1.10.1
 	cassowary@0.3.0
 	castaway@0.2.3
-	cc@1.2.18
+	cc@1.2.25
 	cfg-expr@0.15.8
 	cfg-if@1.0.0
-	chrono@0.4.40
-	clap@4.5.35
-	clap_builder@4.5.35
-	clap_complete@4.5.47
+	chrono@0.4.41
+	clap@4.5.39
+	clap_builder@4.5.39
+	clap_complete@4.5.51
 	clap_complete_fig@4.5.2
-	clap_complete_nushell@4.5.5
+	clap_complete_nushell@4.5.6
 	clap_derive@4.5.32
 	clap_lex@0.7.4
 	clipboard-win@5.4.0
@@ -61,16 +63,17 @@ CRATES="
 	compact_str@0.8.1
 	concurrent-queue@2.5.0
 	console@0.15.11
+	convert_case@0.7.1
 	core-foundation-sys@0.8.7
 	crc32fast@1.4.2
-	crossbeam-channel@0.5.14
+	crossbeam-channel@0.5.15
 	crossbeam-deque@0.8.6
 	crossbeam-epoch@0.9.18
 	crossbeam-utils@0.8.21
 	crossterm@0.28.1
+	crossterm@0.29.0
 	crossterm_winapi@0.9.1
 	crunchy@0.2.3
-	crypto-common@0.1.6
 	darling@0.20.11
 	darling_core@0.20.11
 	darling_macro@0.20.11
@@ -78,18 +81,21 @@ CRATES="
 	derive_builder@0.20.2
 	derive_builder_core@0.20.2
 	derive_builder_macro@0.20.2
-	digest@0.10.7
+	derive_more-impl@2.0.1
+	derive_more@2.0.1
 	dirs-sys@0.5.0
 	dirs@6.0.0
+	document-features@0.2.11
 	either@1.15.0
 	encode_unicode@1.0.0
 	env_home@0.1.0
 	equivalent@1.0.2
 	erased-serde@0.4.6
-	errno@0.3.11
-	error-code@3.3.1
+	errno@0.3.12
+	error-code@3.3.2
 	event-listener@4.0.3
 	exr@1.73.0
+	fast-srgb8@1.0.0
 	fdeflate@0.3.7
 	fdlimit@0.3.0
 	filedescriptor@0.8.3
@@ -98,6 +104,7 @@ CRATES="
 	fnv@1.0.7
 	foldhash@0.1.5
 	fsevent-sys@4.1.0
+	funty@2.0.0
 	futures-channel@0.3.31
 	futures-core@0.3.31
 	futures-executor@0.3.31
@@ -107,14 +114,13 @@ CRATES="
 	futures-task@0.3.31
 	futures-util@0.3.31
 	futures@0.3.31
-	generic-array@0.14.7
-	getrandom@0.2.15
-	getrandom@0.3.2
+	getrandom@0.2.16
+	getrandom@0.3.3
 	gif@0.13.1
 	gimli@0.31.1
 	globset@0.4.16
 	half@2.6.0
-	hashbrown@0.15.2
+	hashbrown@0.15.3
 	heck@0.5.0
 	iana-time-zone-haiku@0.1.2
 	iana-time-zone@0.1.63
@@ -135,30 +141,31 @@ CRATES="
 	jobserver@0.1.33
 	js-sys@0.3.77
 	kqueue-sys@1.0.4
-	kqueue@1.0.8
+	kqueue@1.1.1
 	lazy_static@1.5.0
 	lebe@0.5.2
-	libc@0.2.171
+	libc@0.2.172
 	libfuzzer-sys@0.4.9
 	libredox@0.1.3
 	linux-raw-sys@0.4.15
-	lock_api@0.4.12
+	linux-raw-sys@0.9.4
+	litrs@0.4.1
+	lock_api@0.4.13
 	log@0.4.27
 	loop9@0.1.5
 	lru@0.12.5
-	lru@0.13.0
+	lru@0.14.0
 	lua-src@547.0.0
 	luajit-src@210.5.12+a4f56a4
 	malloc_buf@0.0.6
 	matchers@0.1.0
 	maybe-rayon@0.1.1
-	md-5@0.10.6
 	memchr@2.7.4
 	minimal-lexical@0.2.1
-	miniz_oxide@0.8.7
-	mio@1.0.3
-	mlua-sys@0.6.7
-	mlua@0.10.3
+	miniz_oxide@0.8.8
+	mio@1.0.4
+	mlua-sys@0.6.8
+	mlua@0.10.5
 	mlua_derive@0.10.1
 	new_debug_unreachable@1.0.6
 	nom@7.1.3
@@ -180,14 +187,18 @@ CRATES="
 	objc@0.2.7
 	object@0.36.7
 	once_cell@1.21.3
-	onig@6.4.0
-	onig_sys@69.8.1
+	once_cell_polyfill@1.70.1
+	onig@6.5.1
+	onig_sys@69.9.1
 	option-ext@0.2.0
 	ordered-float@2.10.1
+	ordered-float@4.6.0
 	overload@0.1.1
+	palette@0.7.6
+	palette_derive@0.7.6
 	parking@2.2.1
-	parking_lot@0.12.3
-	parking_lot_core@0.9.10
+	parking_lot@0.12.4
+	parking_lot_core@0.9.11
 	paste@1.0.15
 	percent-encoding@2.3.1
 	pin-project-lite@0.2.16
@@ -199,22 +210,24 @@ CRATES="
 	ppv-lite86@0.2.21
 	proc-macro-error-attr2@2.0.0
 	proc-macro-error2@2.0.1
-	proc-macro2@1.0.94
+	proc-macro2@1.0.95
 	profiling-procmacros@1.0.16
 	profiling@1.0.16
 	qoi@0.4.1
+	quantette@0.3.0
 	quick-error@2.0.1
 	quick-xml@0.32.0
 	quote@1.0.40
 	r-efi@5.2.0
+	radium@0.7.0
 	rand@0.8.5
 	rand_chacha@0.3.1
 	rand_core@0.6.4
 	ratatui@0.29.0
 	rav1e@0.7.1
-	ravif@0.11.11
+	ravif@0.11.12
 	rayon-core@1.12.1
-	redox_syscall@0.5.11
+	redox_syscall@0.5.12
 	redox_users@0.5.0
 	regex-automata@0.1.10
 	regex-automata@0.4.9
@@ -226,8 +239,10 @@ CRATES="
 	rustc-hash@2.1.1
 	rustc_version@0.4.1
 	rustix@0.38.44
-	rustversion@1.0.20
+	rustix@1.0.7
+	rustversion@1.0.21
 	ryu@1.0.20
+	safe_arch@0.7.4
 	same-file@1.0.6
 	scopeguard@1.2.0
 	semver@1.0.26
@@ -239,23 +254,24 @@ CRATES="
 	sharded-slab@0.1.7
 	shlex@1.3.0
 	signal-hook-mio@0.2.4
-	signal-hook-registry@1.4.2
+	signal-hook-registry@1.4.5
 	signal-hook-tokio@0.3.1
-	signal-hook@0.3.17
+	signal-hook@0.3.18
 	simd-adler32@0.3.7
 	simd_helpers@0.1.0
 	simdutf8@0.1.5
 	slab@0.4.9
 	smallvec@1.15.0
 	smawk@0.3.2
-	socket2@0.5.9
+	socket2@0.5.10
 	static_assertions@1.1.0
 	strsim@0.11.1
 	strum@0.26.3
 	strum_macros@0.26.4
-	syn@2.0.100
+	syn@2.0.101
 	syntect@5.2.0
 	system-deps@6.2.2
+	tap@1.0.1
 	target-lexicon@0.12.16
 	textwrap@0.16.2
 	thiserror-impl@1.0.69
@@ -270,11 +286,12 @@ CRATES="
 	time@0.3.41
 	tokio-macros@2.5.0
 	tokio-stream@0.1.17
-	tokio-util@0.7.14
-	tokio@1.44.2
-	toml@0.8.20
-	toml_datetime@0.6.8
-	toml_edit@0.22.24
+	tokio-util@0.7.15
+	tokio@1.45.1
+	toml@0.8.22
+	toml_datetime@0.6.9
+	toml_edit@0.22.26
+	toml_write@0.1.1
 	tracing-appender@0.2.3
 	tracing-attributes@0.1.28
 	tracing-core@0.1.33
@@ -284,7 +301,6 @@ CRATES="
 	trash@5.2.2
 	twox-hash@2.1.0
 	typeid@1.0.3
-	typenum@1.18.0
 	unicode-ident@1.0.18
 	unicode-linebreak@0.1.5
 	unicode-segmentation@1.12.0
@@ -296,11 +312,10 @@ CRATES="
 	uzers@0.12.1
 	v_frame@0.3.8
 	valuable@0.1.1
-	vergen-gitcl@1.0.5
+	vergen-gitcl@1.0.8
 	vergen-lib@0.1.6
-	vergen@9.0.4
+	vergen@9.0.6
 	version-compare@0.2.0
-	version_check@0.9.5
 	walkdir@2.5.0
 	wasi@0.11.0+wasi-snapshot-preview1
 	wasi@0.14.2+wasi-0.2.4
@@ -309,22 +324,23 @@ CRATES="
 	wasm-bindgen-macro@0.2.100
 	wasm-bindgen-shared@0.2.100
 	wasm-bindgen@0.2.100
-	weezl@0.1.8
-	which@7.0.2
+	weezl@0.1.10
+	which@7.0.3
+	wide@0.7.32
 	winapi-i686-pc-windows-gnu@0.4.0
 	winapi-util@0.1.9
 	winapi-x86_64-pc-windows-gnu@0.4.0
 	winapi@0.3.9
 	windows-core@0.56.0
-	windows-core@0.61.0
+	windows-core@0.61.2
 	windows-implement@0.56.0
 	windows-implement@0.60.0
 	windows-interface@0.56.0
 	windows-interface@0.59.1
 	windows-link@0.1.1
 	windows-result@0.1.2
-	windows-result@0.3.2
-	windows-strings@0.4.0
+	windows-result@0.3.4
+	windows-strings@0.4.2
 	windows-sys@0.52.0
 	windows-sys@0.59.0
 	windows-targets@0.52.6
@@ -337,17 +353,19 @@ CRATES="
 	windows_x86_64_gnu@0.52.6
 	windows_x86_64_gnullvm@0.52.6
 	windows_x86_64_msvc@0.52.6
-	winnow@0.7.6
+	winnow@0.7.10
 	winsafe@0.0.19
 	wit-bindgen-rt@0.39.0
+	wyz@0.5.1
 	yazi-prebuilt@0.1.0
-	zerocopy-derive@0.8.24
-	zerocopy@0.8.24
+	zerocopy-derive@0.8.25
+	zerocopy@0.8.25
 	zune-core@0.4.12
 	zune-inflate@0.2.54
 	zune-jpeg@0.4.14
 "
 
+RUST_MIN_VER="1.86.0"
 inherit cargo desktop shell-completion xdg
 
 DESCRIPTION="Blazing fast terminal file manager written in Rust, based on async I/O."
