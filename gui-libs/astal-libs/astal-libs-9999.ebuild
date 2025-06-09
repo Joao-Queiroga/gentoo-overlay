@@ -9,7 +9,7 @@ EGIT_REPO_URI="https://github.com/Aylur/astal"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="+apps +auth +battery +bluetooth +cava +greet +hyprland +mpris +network +notifd +powerprofiles +river +tray +wireplumber"
+IUSE="+apps +auth +battery +bluetooth cava +greet +hyprland +mpris +network +notifd +powerprofiles +river +tray +wireplumber"
 
 DEPEND="
 	gui-libs/gtk-layer-shell[introspection]
@@ -18,6 +18,7 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND="
 	tray? ( gui-libs/appmenu-glib-translator )
+	network? ( net-misc/networkmanager[vala] )
 	dev-libs/gobject-introspection
 	dev-libs/wayland-protocols
 	dev-build/meson
