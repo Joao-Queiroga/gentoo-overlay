@@ -47,17 +47,11 @@ BDEPEND="
 
 src_configure() {
 	local mycmakeargs=(
+		-GNinja
 		-DCMAKE_INSTALL_PREFIX=/usr
 		-DCMAKE_BUILD_TYPE=RelWithDebInfo
 		-DDISTRIBUTOR="Gentoo (ebuild: quickshell)"
-		-DDISTRIBUTOR_DEBUGINFO_AVAILABLE=NO
-		-DINSTALL_QML_PREFIX=lib/qt6/qml
+		-DINSTALL_QML_PREFIX=lib64/qt6/qml
 	)
 	cmake_src_configure
-}
-
-src_install() {
-	cmake_src_install
-
-	dodoc LICENSE
 }
