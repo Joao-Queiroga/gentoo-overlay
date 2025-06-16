@@ -16,6 +16,7 @@ SLOT="0"
 DEPEND="
 	gui-libs/astal
 	gui-libs/astal-libs
+	dev-libs/gjs
 	net-libs/nodejs[npm]
 	dev-util/dart-sass
 "
