@@ -8,7 +8,6 @@ inherit git-r3 go-module meson
 DESCRIPTION="A customizable and extensible shell"
 HOMEPAGE="https://github.com/Aylur/ags"
 EGIT_REPO_URI="https://github.com/Aylur/ags.git"
-EGIT_BRANCH="v3"
 
 LICENSE="GPL-3.0"
 SLOT="0"
